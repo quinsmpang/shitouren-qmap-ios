@@ -1,0 +1,98 @@
+PODS:
+  - AFNetworking (2.5.4):
+    - AFNetworking/NSURLConnection (= 2.5.4)
+    - AFNetworking/NSURLSession (= 2.5.4)
+    - AFNetworking/Reachability (= 2.5.4)
+    - AFNetworking/Security (= 2.5.4)
+    - AFNetworking/Serialization (= 2.5.4)
+    - AFNetworking/UIKit (= 2.5.4)
+  - AFNetworking/NSURLConnection (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.5.4):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.5.4)
+  - AFNetworking/Security (2.5.4)
+  - AFNetworking/Serialization (2.5.4)
+  - AFNetworking/UIKit (2.5.4):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - ASIHTTPRequest (1.8.2):
+    - ASIHTTPRequest/ASIWebPageRequest (= 1.8.2)
+    - ASIHTTPRequest/CloudFiles (= 1.8.2)
+    - ASIHTTPRequest/Core (= 1.8.2)
+    - ASIHTTPRequest/S3 (= 1.8.2)
+  - ASIHTTPRequest/ASIWebPageRequest (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/CloudFiles (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASIHTTPRequest/Core (1.8.2):
+    - Reachability
+  - ASIHTTPRequest/S3 (1.8.2):
+    - ASIHTTPRequest/Core
+  - ASProgressPopUpView (0.8)
+  - DACircularProgress (2.3.1)
+  - FXLabel (1.5.8)
+  - IGDigest (1.1.2)
+  - IQKeyboardManager (3.2.1.2)
+  - MBProgressHUD (0.9.1)
+  - MWPhotoBrowser (1.4.1):
+    - DACircularProgress
+    - MBProgressHUD (~> 0.8)
+    - PSTCollectionView (~> 1.2)
+    - SDWebImage (~> 3.7)
+  - NSData+Base64 (1.0.0)
+  - NSLogger (1.5.1):
+    - NSLogger/Standard (= 1.5.1)
+  - NSLogger/Standard (1.5.1)
+  - PSTCollectionView (1.2.3)
+  - Reachability (3.2)
+  - SDWebImage (3.7.3):
+    - SDWebImage/Core (= 3.7.3)
+  - SDWebImage/Core (3.7.3)
+  - SVPullToRefresh (0.4.1)
+  - UITextView+Placeholder (1.0.9)
+  - ViewDeck (2.3.1)
+  - VPImageCropper (0.0.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 2.5.1)
+  - ASIHTTPRequest (~> 1.8.2)
+  - ASProgressPopUpView (~> 0.8)
+  - FXLabel (~> 1.5.8)
+  - IGDigest (~> 1.1.2)
+  - IQKeyboardManager (~> 3.2.1.1)
+  - MBProgressHUD (~> 0.9.1)
+  - MWPhotoBrowser (~> 1.4.1)
+  - NSData+Base64 (~> 1.0.0)
+  - NSLogger (~> 1.5.1)
+  - SDWebImage (~> 3.7.1)
+  - SVPullToRefresh (~> 0.4.1)
+  - UITextView+Placeholder (~> 1.0.9)
+  - ViewDeck (~> 2.3.1)
+  - VPImageCropper (~> 0.0.4)
+
+SPEC CHECKSUMS:
+  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
+  ASIHTTPRequest: ec013992946676b7978dcbde6396d57312d21db4
+  ASProgressPopUpView: 945c19297da09a625db48a5a37cabd7756916b9b
+  DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  FXLabel: 14f7d4abb0eb531a0824b327a86f5b790171207f
+  IGDigest: 066753c10f3f1b593b00037b9ee93dc96b9e7762
+  IQKeyboardManager: 4adcd7cc9c17440a7cb74755f6f6c8389919c6bf
+  MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MWPhotoBrowser: 2531e682860d62b8a7ba8659de02eb9040e431e5
+  NSData+Base64: 4e84902c4db907a15673474677e57763ef3903e4
+  NSLogger: 5ed223a2436df96244e033be750656dacdeec034
+  PSTCollectionView: 6749df92885353521f55279a7ce2b293762e2be4
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
+  SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  UITextView+Placeholder: 83895056749372c96febfb43f536c9b1aae3e08e
+  ViewDeck: 3e9bfcc36d889155d77ae47811a4d48714ee8d0c
+  VPImageCropper: f4895315460bd05fbb22dbee6b063bdd43f25797
+
+COCOAPODS: 0.35.0

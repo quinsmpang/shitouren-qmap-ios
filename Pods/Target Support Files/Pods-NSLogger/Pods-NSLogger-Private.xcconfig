@@ -1,0 +1,5 @@
+#include "Pods-NSLogger.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 ${PODS_NSLOGGER_GCC_PREPROCESSOR_DEFINITIONS}
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/NSLogger" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ASIHTTPRequest" "${PODS_ROOT}/Headers/Public/ASProgressPopUpView" "${PODS_ROOT}/Headers/Public/DACircularProgress" "${PODS_ROOT}/Headers/Public/FXLabel" "${PODS_ROOT}/Headers/Public/IGDigest" "${PODS_ROOT}/Headers/Public/IQKeyboardManager" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MWPhotoBrowser" "${PODS_ROOT}/Headers/Public/NSData+Base64" "${PODS_ROOT}/Headers/Public/NSLogger" "${PODS_ROOT}/Headers/Public/PSTCollectionView" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/SDWebImage" "${PODS_ROOT}/Headers/Public/SVPullToRefresh" "${PODS_ROOT}/Headers/Public/UITextView+Placeholder" "${PODS_ROOT}/Headers/Public/VPImageCropper" "${PODS_ROOT}/Headers/Public/ViewDeck"
+OTHER_LDFLAGS = ${PODS_NSLOGGER_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController">
+            <connections>
+                <outlet property="btnFeed" destination="3MD-Wn-YgG" id="fjv-Pf-Ued"/>
+                <outlet property="btnTopic" destination="RLY-sA-ucF" id="DcS-gH-sOQ"/>
+                <outlet property="btnUser" destination="Sc5-N1-xVE" id="JOV-Az-VYJ"/>
+                <outlet property="searchDisplayController" destination="czT-Ej-4Vz" id="kLI-Ne-3vf"/>
+                <outlet property="view" destination="70" id="74"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="70">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Sc5-N1-xVE">
+                    <rect key="frame" x="8" y="151" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                    <state key="normal" image="menu-1-1.png"/>
+                    <state key="selected" image="nav_setting_1.png"/>
+                    <state key="highlighted" image="menu-1-1.png"/>
+                    <connections>
+                        <action selector="goUser:" destination="-1" eventType="touchUpInside" id="wFF-VE-h2e"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="3MD-Wn-YgG">
+                    <rect key="frame" x="76" y="151" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                    <state key="normal" image="action_like_1.png"/>
+                    <state key="selected" image="nav_setting_1.png"/>
+                    <state key="highlighted" image="menu-1-1.png"/>
+                    <connections>
+                        <action selector="goFeed:" destination="-1" eventType="touchUpInside" id="TXc-Ee-UrC"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RLY-sA-ucF">
+                    <rect key="frame" x="144" y="151" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
+                    <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
+                    <state key="normal" image="action_reply_1.png"/>
+                    <state key="selected" image="nav_setting_1.png"/>
+                    <state key="highlighted" image="menu-1-1.png"/>
+                    <connections>
+                        <action selector="goTopic:" destination="-1" eventType="touchUpInside" id="e84-R5-ONa"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862745098034" green="0.93333333333333335" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+        </view>
+        <searchDisplayController id="CrX-99-Yup">
+            <connections>
+                <outlet property="delegate" destination="-1" id="SeX-co-J5B"/>
+                <outlet property="searchContentsController" destination="-1" id="lyC-kg-ORG"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="iSs-5b-i37"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="ypn-id-WH8"/>
+            </connections>
+        </searchDisplayController>
+        <searchDisplayController id="czT-Ej-4Vz">
+            <connections>
+                <outlet property="delegate" destination="-1" id="Vpp-1o-pMt"/>
+                <outlet property="searchContentsController" destination="-1" id="xlb-ps-dRD"/>
+                <outlet property="searchResultsDataSource" destination="-1" id="CZU-eb-PAf"/>
+                <outlet property="searchResultsDelegate" destination="-1" id="bcb-GX-SWJ"/>
+            </connections>
+        </searchDisplayController>
+    </objects>
+    <resources>
+        <image name="action_like_1.png" width="44" height="44"/>
+        <image name="action_reply_1.png" width="44" height="44"/>
+        <image name="menu-1-1.png" width="200" height="200"/>
+        <image name="nav_setting_1.png" width="44" height="44"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

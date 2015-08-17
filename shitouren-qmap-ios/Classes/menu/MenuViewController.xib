@@ -26,8 +26,9 @@
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
                     <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                    <state key="normal" image="menu-1-1.png"/>
-                    <state key="selected" image="nav_setting_1.png"/>
+                    <state key="normal" title="登录">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <state key="highlighted" image="menu-1-1.png"/>
                     <connections>
                         <action selector="goUser:" destination="-1" eventType="touchUpInside" id="wFF-VE-h2e"/>
@@ -41,9 +42,9 @@
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
                     <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                    <state key="normal" image="action_like_1.png"/>
-                    <state key="selected" image="nav_setting_1.png"/>
-                    <state key="highlighted" image="menu-1-1.png"/>
+                    <state key="normal" title="关于">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="goFeed:" destination="-1" eventType="touchUpInside" id="TXc-Ee-UrC"/>
                     </connections>
@@ -56,9 +57,9 @@
                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="10"/>
                     <inset key="imageEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                    <state key="normal" image="action_reply_1.png"/>
-                    <state key="selected" image="nav_setting_1.png"/>
-                    <state key="highlighted" image="menu-1-1.png"/>
+                    <state key="normal" title="话题">
+                        <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                     <connections>
                         <action selector="goTopic:" destination="-1" eventType="touchUpInside" id="e84-R5-ONa"/>
                     </connections>
@@ -86,10 +87,7 @@
         </searchDisplayController>
     </objects>
     <resources>
-        <image name="action_like_1.png" width="44" height="44"/>
-        <image name="action_reply_1.png" width="44" height="44"/>
         <image name="menu-1-1.png" width="200" height="200"/>
-        <image name="nav_setting_1.png" width="44" height="44"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

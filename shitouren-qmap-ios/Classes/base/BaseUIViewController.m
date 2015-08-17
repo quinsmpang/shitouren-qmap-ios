@@ -1,6 +1,7 @@
 #import "BaseUIViewController.h"
 #import "AppDelegate.h"
 #import "LoggerClient.h"
+#import "IIViewDeckController.h"
 
 @implementation BaseUIViewController
 
@@ -32,23 +33,32 @@
     
     baseTitle = [[FXLabel alloc] initWithFrame:CGRectMake(0, 0, 80, 44)];
     baseTitle.font = [UIFont boldSystemFontOfSize:20.0f];
+    
     baseTitle.backgroundColor = [UIColor clearColor];
     baseTitle.textColor = UIColorFromRGB(0x7F7F7F, 1.0f);
     baseTitle.textAlignment = NSTextAlignmentCenter;
     baseTitleBarBtn = [[UIBarButtonItem alloc] initWithCustomView:baseTitle];
     
+    //    funcBtn = [[UIButton alloc]initWithFrame:CGRectMake(10, 10, 45, 30)];
+    //    [funcBtn setTitle:@"完成" forState:UIControlStateNormal];
+    //    funcBarBtn = [[UIBarButtonItem alloc] initWithCustomView:funcBtn];
+    
     self.navigationItem.leftBarButtonItem = baseBackBarBtn;
+    //    self.navigationItem.rightBarButtonItem = funcBarBtn;
     self.navigationItem.hidesBackButton  = YES;
     self.navigationItem.titleView = baseTitle;
     
     CGRect frame = self.navigationController.navigationBar.frame;
     frame.size.height = 64;
     self.navigationController.navigationBar.frame = frame;
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
     [self.navigationController setNavigationBarHidden:NO animated:NO];
     //    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_bar_bg.png"] forBarMetrics:UIBarMetricsDefault];  //设置背景
     self.navigationController.navigationBar.backgroundColor = [UIColor whiteColor];
@@ -58,13 +68,10 @@
     baseNavBarHairlineImageView.hidden = YES;
 }
 
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-}
-
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     baseNavBarHairlineImageView.hidden = NO;
+    [self.navigationController setNavigationBarHidden:YES animated:NO];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -121,8 +128,7 @@
     [baseHud show:YES];
     [baseHud hide:YES afterDelay:1.5];
 }
-
-- (void)baseDeckBack {
+- (void)baseDeckAndNavBack {
     //    //ctrol现在是UITabBarController
     //    UITabBarController* ctrol=(UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController;
     //    //切换第二视图
@@ -135,6 +141,17 @@
         [self baseNavBack];
     }];
 }
+- (void)baseDeckBack {
+    //    //ctrol现在是UITabBarController
+    //    UITabBarController* ctrol=(UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    //    //切换第二视图
+    //    [ctrol setSelectedIndex:0];
+    
+    //ctrol现在是IIViewDeckController
+    IIViewDeckController* ctrol=(IIViewDeckController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    //切换第二视图
+    [ctrol toggleTopViewAnimated:YES];
+}
 - (void)baseNavBack {
     if (self.navigationController) {
         [self.navigationController popViewControllerAnimated:YES];
@@ -143,6 +160,24 @@
 - (void)baseBack:(id)sender
 {
     [self baseNavBack];
+}
+
+- (void)toCocos : (long) userID
+                : (NSString *) name
+                : (NSString *) intro
+                : (NSString *) zone
+                : (NSString *) thumblink
+                : (NSString *) imglink
+{
+    if(toCocosCallback)
+    {
+        toCocosCallback(userID, name, intro, zone, thumblink, imglink);
+    }
+}
+
++ (void)setToCocosCallback:(ToCocosCallback)pToCocosCallback
+{
+    toCocosCallback = pToCocosCallback;
 }
 
 @end

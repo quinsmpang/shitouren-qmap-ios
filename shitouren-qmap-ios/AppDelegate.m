@@ -33,8 +33,8 @@
     viewDeckController.panningMode = IIViewDeckNoPanning;
     viewDeckController.shadowEnabled = NO;
     //    /* To adjust speed of open/close animations, set either of these two properties. */
-    viewDeckController.openSlideAnimationDuration = 2.0f;
-    viewDeckController.closeSlideAnimationDuration = 2.0f;
+    viewDeckController.openSlideAnimationDuration = 0.2f;
+    viewDeckController.closeSlideAnimationDuration = 0.2f;
     self.window.rootViewController = viewDeckController;
     
     LoggerSetOptions(NULL, kLoggerOption_LogToConsole);
@@ -79,9 +79,29 @@
     return (AppDelegate *) [UIApplication sharedApplication].delegate;
 }
 
+
+-(void)toIOS:(UIViewController *)vc
+{
+    //    //ctrol现在是UITabBarController
+    //    UITabBarController* ctrol=(UITabBarController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    //    //切换第二视图
+    //    [ctrol setSelectedIndex:1];
+    //    UINavigationController *nav = (UINavigationController*)([ctrol.childViewControllers objectAtIndex:1]);
+    //    //现在用push而不是present将视图压栈
+    //    [nav pushViewController:vc animated:NO];
+    
+    //ctrol现在是IIViewDeckController
+    IIViewDeckController* ctrol=(IIViewDeckController*)[UIApplication sharedApplication].keyWindow.rootViewController;
+    //切换第二视图
+    [ctrol toggleTopViewAnimated:YES];
+    UINavigationController *nav = (UINavigationController*)(ctrol.centerController);
+    //现在用push而不是present将视图压栈
+    [nav pushViewController:vc animated:NO];
+}
+
 - (void)MVCgoLogin {
-    LoginViewController *loginVC = [[LoginViewController alloc]  init];
-    [self.cocosViewController presentViewController:[[UINavigationController alloc] initWithRootViewController: loginVC] animated:YES completion:nil];
+    LoginViewController *vc = [[LoginViewController alloc]  init];
+    [self toIOS:vc];
 }
 - (void)MVCgoBrief {
     
@@ -90,15 +110,8 @@
     
 }
 - (void)MVCgoTopic {
-    TopicViewController *topicVC = [[TopicViewController alloc]  init];
-    
-    //ctrol现在是IIViewDeckController
-    IIViewDeckController* ctrol=(IIViewDeckController*)[UIApplication sharedApplication].keyWindow.rootViewController;
-    //切换第二视图
-    [ctrol toggleTopView];
-    UINavigationController *nav = (UINavigationController*)(ctrol.centerController);
-    //现在用push而不是present将视图压栈
-    [nav pushViewController:topicVC animated:NO];
+    TopicViewController *vc = [[TopicViewController alloc]  init];
+    [self toIOS:vc];
 }
 - (void)MVCgoFeed {
     

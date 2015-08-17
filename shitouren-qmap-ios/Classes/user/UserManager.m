@@ -6,6 +6,7 @@
 SYNTHESIZE_SINGLETON_FOR_CLASS(UserManager);
 
 @synthesize userid,base,ss,brief,detail;
+@synthesize callout1,callout2,callout3;
 
 -(id)init{
     self = [super init];
@@ -21,6 +22,11 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(UserManager);
     base = [[UserBaseItem alloc] init:userid];
     brief = [[UserBriefItem alloc] init:userid];
     detail = [[UserDetailItem alloc] init:userid];
+//    callouts = [[NSArray alloc] initWithObjects:@"", @"", @"", nil];
+    callout1 = [defaults stringForKey:@"SHITOUREN_UD_CALLOUT1"];
+    callout2 = [defaults stringForKey:@"SHITOUREN_UD_CALLOUT2"];
+    callout3 = [defaults stringForKey:@"SHITOUREN_UD_CALLOUT3"];
+
     return self;
 }
 
@@ -457,5 +463,19 @@ SYNTHESIZE_SINGLETON_FOR_CLASS(UserManager);
     [defaults setObject:@"null" forKey:@"SHITOUREN_UD_HORO"];
     SendNotify(@"SHITOUREN_USER_SIGNOUT_POST_SUCC",self);
 }
+
+//- (void)saveCallout:(NSString*)str1 :(NSString*)str2 :(NSString*)str3
+//{
+////    [callouts replaceObjectAtIndex:0 withObject:@""];
+////    callouts removeA
+//    callout1 = str1;
+//    callout2 = str2;
+//    callout3 = str3;
+//}
+
+//- (NSArray*)getCallout
+//{
+//    return callouts;
+//}
 
 @end

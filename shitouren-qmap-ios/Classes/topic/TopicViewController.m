@@ -91,7 +91,7 @@
 - (void)baseBack:(id)sender
 {
     [self getOff];
-    [self baseDeckBack];
+    [self baseDeckAndNavBack];
     if( callback ){
         callback( YES );
     }

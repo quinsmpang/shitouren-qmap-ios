@@ -8,6 +8,7 @@
 @interface UserManager : NSObject
 {
     int index;
+//    NSArray *callouts;
 }
 SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(UserManager);
 
@@ -16,6 +17,10 @@ SYNTHESIZE_SINGLETON_FOR_CLASS_HEADER(UserManager);
 @property (copy, atomic) UserSsItem         *ss;
 @property (copy, atomic) UserBriefItem      *brief;
 @property (copy, atomic) UserDetailItem     *detail;
+//@property (strong, atomic) NSMutableArray     *callouts;
+@property (copy, atomic) NSString           *callout1;
+@property (copy, atomic) NSString           *callout2;
+@property (copy, atomic) NSString           *callout3;
 
 -(BOOL)validate:(void (^)(int ret)) loginCallback;
 -(BOOL)signinWithPhone:(NSString *)pPhone passwd:(NSString *)pPasswd;
